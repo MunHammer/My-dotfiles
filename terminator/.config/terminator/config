@@ -1,0 +1,25 @@
+[global_config]
+[keybindings]
+[profiles]
+  [[default]]
+    audible_bell = True
+    background_color = "#191834"
+    background_darkness = 0.87
+    background_type = transparent
+    cursor_shape = ibeam
+    cursor_fg_color = "#f1adff"
+    cursor_bg_color = "#191834"
+    font = Cousine Nerd Font 10
+    foreground_color = "#d6adff"
+    palette = "#3c4043:#700900:#33d17a:#e5a50a:#3584e4:#83008f:#008d94:#e9d6ff:#9aa0a6:#ff291a:#00ff40:#ffff00:#99c1f1:#e600ff:#00ffff:#ffffff"
+    use_system_font = False
+    bold_is_bright = True
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]

@@ -1,0 +1,17 @@
+[[language]]
+name = "rust"
+auto-format = true
+roots = ["../Cargo.toml", "../Cargo.lock"]
+scope = "source.rs"
+file-types = ["rs"]
+diagnostic-severity = "info"
+comment-tokens = ["//", "///", "//!"]
+block-comment-tokens = [{start = "/*", end = "*/"}, {start = "/*!", end = "*/"}, {start = "/**", end = "*/"}]
+indent = {tab-width = 4, unit = " "}
+text-width = 75
+
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+args = ["--workspace", "--", "-W clippy::unwrap_used", "-W clippy::expect_used"]

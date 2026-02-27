@@ -1,0 +1,48 @@
+theme = "base16_transparent"
+[editor]
+trim-trailing-whitespace = true
+
+[editor.cursor-shape]
+insert = "bar"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.auto-save]
+focus-lost = true
+after-delay.enable = true
+
+
+[editor.statusline]
+left = ["mode", "version-control", "spinner", "read-only-indicator"]
+center = ["file-absolute-path", "spacer", "file-modification-indicator"]
+right = ["diagnostics", "file-type", "file-encoding", "position"]
+separator = " | "
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+diagnostics = []
+
+[editor.whitespace]
+render = "all"
+[editor.whitespace.character]
+space = "·"
+newline = "⏎"
+tab = "N"
+tabpad = "O"
+nnbsp = "␣"
+nbsp = "⍽"
+
+[editor.indent-guides]
+render = true
+character = "┊"
+
+[editor.soft-wrap]
+enable = true
+wrap-indicator = "  "
+wrap-at-text-width = true
+
+[editor.inline-diagnostics]
+cursor-line = "hint"
+other-lines = "warning"
