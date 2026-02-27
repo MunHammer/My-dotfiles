@@ -1,0 +1,9 @@
+[core]
+	editor = hx
+[user]
+	name = User
+	email = email
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
