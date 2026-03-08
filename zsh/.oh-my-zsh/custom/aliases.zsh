@@ -17,3 +17,4 @@ alias venv='source ~/Programming/PythonProjects/Python-env/bin/activate' # Activ
 alias neofetch='echo "I do not have neofetch installed, so here is fastfetch"; fastfetch' # replaces neofetch
 alias cat="batcat -p --paging=never"
 alias fcat="command batcat"
+alias cd="z"
