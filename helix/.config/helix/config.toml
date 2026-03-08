@@ -1,6 +1,7 @@
 theme = "base16_transparent"
 [editor]
 trim-trailing-whitespace = true
+gutters = ["diagnostics", "line-numbers", "spacer", "diff"]
 
 [editor.cursor-shape]
 insert = "bar"
@@ -16,13 +17,14 @@ after-delay.enable = true
 
 [editor.statusline]
 left = ["mode", "version-control", "spinner", "read-only-indicator"]
-center = ["file-absolute-path", "spacer", "file-modification-indicator"]
-right = ["diagnostics", "file-type", "file-encoding", "position"]
+center = ["file-name", "spacer", "file-modification-indicator"]
+right = ["diagnostics", "workspace-diagnostics", "file-type", "file-encoding", "position"]
 separator = " | "
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
-diagnostics = []
+diagnostics = ["warning", "error", "info", "hint"]
+workspace-diagnostics = ["warning", "error"]
 
 [editor.whitespace]
 render = "all"
