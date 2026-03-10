@@ -36,7 +36,7 @@ The programs I use for these dotfiles:
 ```bash
   sudo add-apt-repository ppa:maveonair/helix-editor
   sudo apt update
-  sudo apt install zsh git terminator fastfetch helix stow
+  sudo apt install zsh git terminator fastfetch helix stow bat fzf
   # This one is optional, but I recommend it, because I have aliases for rust
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
   # The site https://rust-lang.org/tools/install/

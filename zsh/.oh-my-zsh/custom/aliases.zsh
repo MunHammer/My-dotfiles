@@ -1,5 +1,4 @@
 # colouring some helpful commands
-alias ls='ls --color=auto'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
@@ -17,4 +16,4 @@ alias venv='source ~/Programming/PythonProjects/Python-env/bin/activate' # Activ
 alias neofetch='echo "I do not have neofetch installed, so here is fastfetch"; fastfetch' # replaces neofetch
 alias cat="batcat -p --paging=never"
 alias fcat="command batcat"
-alias cd="z"
+alias ls="eza"

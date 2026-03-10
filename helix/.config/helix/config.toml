@@ -1,7 +1,28 @@
 theme = "base16_transparent"
+
 [editor]
-trim-trailing-whitespace = true
+scrolloff = 10
+mouse = false
+shell = ["zsh", "-c"]
 gutters = ["diagnostics", "line-numbers", "spacer", "diff"]
+completion-replace = true
+trim-final-newlines = true
+trim-trailing-whitespace = true
+
+[editor.statusline]
+left = ["mode", "version-control", "separator",  "spinner", "read-only-indicator"]
+center = ["file-name", "spacer", "file-modification-indicator"]
+right = ["diagnostics", "workspace-diagnostics", "file-type", "file-encoding", "position"]
+separator = " LSP"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+diagnostics = ["warning", "error", "info", "hint"]
+workspace-diagnostics = ["warning", "error"]
+
+[editor.lsp]
+display-progress-messages = true
+display-inlay-hints = true
 
 [editor.cursor-shape]
 insert = "bar"
@@ -14,27 +35,16 @@ hidden = false
 focus-lost = true
 after-delay.enable = true
 
-
-[editor.statusline]
-left = ["mode", "version-control", "spinner", "read-only-indicator"]
-center = ["file-name", "spacer", "file-modification-indicator"]
-right = ["diagnostics", "workspace-diagnostics", "file-type", "file-encoding", "position"]
-separator = " | "
-mode.normal = "NORMAL"
-mode.insert = "INSERT"
-mode.select = "SELECT"
-diagnostics = ["warning", "error", "info", "hint"]
-workspace-diagnostics = ["warning", "error"]
-
 [editor.whitespace]
 render = "all"
+
 [editor.whitespace.character]
 space = "·"
-newline = "⏎"
-tab = "N"
-tabpad = "O"
-nnbsp = "␣"
 nbsp = "⍽"
+nnbsp = "␣"
+tab = "N"
+newline = "⏎"
+tabpad = "O"
 
 [editor.indent-guides]
 render = true
@@ -42,7 +52,7 @@ character = "┊"
 
 [editor.soft-wrap]
 enable = true
-wrap-indicator = "  "
+wrap-indicator = "⤷ "
 wrap-at-text-width = true
 
 [editor.inline-diagnostics]
