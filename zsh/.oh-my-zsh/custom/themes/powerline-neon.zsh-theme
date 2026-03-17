@@ -21,5 +21,5 @@ ZSH_THEME_GIT_PROMPT_SUFFIX='%k%f'
 TRANSIENT_PROMPT_RPROMPT='$(git_prompt_info)'
 TRANSIENT_PROMPT_PROMPT='%F{black}%K{226}󱐋 $(battery)  %F{226}%K{10}%F{black}  %n %F{10}%K{45}%F{black} 🗀 $(get_cwd) %k%F{45}%f
 %K{200}     %k%F{200}%f '
-TRANSIENT_PROMPT_TRANSIENT_RPROMPT="%F{226}%F{black}%K{226}󱐋 $(battery) %F{15}%K{15}%F{0}%T${TRANSIENT_PROMPT_RPROMPT}"
-TRANSIENT_PROMPT_TRANSIENT_PROMPT="%K{45}%F{black} 🗀 $(get_cwd) %k%F{45}%f "
+TRANSIENT_PROMPT_TRANSIENT_RPROMPT='%F{15}%K{15}%F{0}%T$(git_prompt_info)'
+TRANSIENT_PROMPT_TRANSIENT_PROMPT='%F{black}%K{226}󱐋 $(battery)  %F{226}%K{45}%F{black} 🗀 $(get_cwd) %K{200}%F{45}     %k%F{200}%f '
