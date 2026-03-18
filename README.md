@@ -58,6 +58,6 @@ The programs I use for these dotfiles:
   rm ~/.zshrc ~/.gitconfig ~/.config/terminator/config ~/.config/helix/config.toml ~/.config/helix/languages.toml
   cd ~/.dotfiles
   stow zsh terminator helix git fastfetch
-  # Just in case the things haven't done stuff right
+  # Reload the terminal so everything activates
   source ~/.zshrc
 ```
