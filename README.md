@@ -42,6 +42,8 @@ The programs I use for these dotfiles:
   # The site https://rust-lang.org/tools/install/
   # I used cargo to install zoxide
   cargo install zoxide
+  # follow the prompts, disregard the config
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   # install the plugins
   # syntax highlighting
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
@@ -56,8 +58,6 @@ The programs I use for these dotfiles:
   rm ~/.zshrc ~/.gitconfig ~/.config/terminator/config ~/.config/helix/config.toml ~/.config/helix/languages.toml
   cd ~/.dotfiles
   stow zsh terminator helix git fastfetch
-  # follow the prompts, use the current config that you have now.
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   # Just in case the things haven't done stuff right
   source ~/.zshrc
 ```
