@@ -6,14 +6,14 @@ The programs I use for these dotfiles:
 - [Git](https://git-scm.com/) (obviously)
 - [Helix](https://helix-editor.com/)
 - [Fastfetch](https://github.com/fastfetch-cli/fastfetch)
-- bat
+- [bat](https://github.com/sharkdp/bat)
+- [zoxide](https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation)
+- [fzf](https://github.com/junegunn/fzf#installation)
 - The plugins
-    - [zoxide](https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation)
-    - [fzf](https://github.com/junegunn/fzf#installation)
-    - zsh-autosuggestions
-    - zsh-bat
-    - you-should-use
-    - zsh-syntax-highlighting
+    - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+    - [zsh-bat](https://github.com/fdellwing/zsh-bat)
+    - [you-should-use](https://github.com/MichaelAquilina/zsh-you-should-use)
+    - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
 
 ## How to set up the dotfiles
@@ -42,6 +42,15 @@ The programs I use for these dotfiles:
   # The site https://rust-lang.org/tools/install/
   # I used cargo to install zoxide
   cargo install zoxide
+  # install the plugins
+  # syntax highlighting
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+  # you-should-use
+  git clone https://github.com/MichaelAquilina/zsh-you-should-use.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/you-should-use
+  # autosuggestions
+  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+  # bat
+  git clone https://github.com/fdellwing/zsh-bat.git $ZSH_CUSTOM/plugins/zsh-bat
   # clone this repo
   git clone https://github.com/MunHammer/My-dotfiles.git ~/.dotfiles
   rm ~/.zshrc ~/.gitconfig ~/.config/terminator/config ~/.config/helix/config.toml ~/.config/helix/languages.toml
