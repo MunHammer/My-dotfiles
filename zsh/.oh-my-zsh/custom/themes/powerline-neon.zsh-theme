@@ -2,7 +2,6 @@ setopt PROMPT_SUBST
 function battery() {
   percent=$(upower -i /org/freedesktop/UPower/devices/DisplayDevice | awk '/percentage/ {print $2}')
   echo "${percent}%"
-
 }
 function get_cwd() {
   echo "${PWD/$HOME/~}"

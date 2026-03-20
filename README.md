@@ -6,9 +6,11 @@ The programs I use for these dotfiles:
 - [Git](https://git-scm.com/) (obviously)
 - [Helix](https://helix-editor.com/)
 - [Fastfetch](https://github.com/fastfetch-cli/fastfetch)
-- [bat](https://github.com/sharkdp/bat)
-- [zoxide](https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation)
+- [Bat](https://github.com/sharkdp/bat)
+- [Zoxide](https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation)
 - [fzf](https://github.com/junegunn/fzf#installation)
+- [Taplo](https://rust-lang.org/)
+- [Rust](https://rust-lang.org/)
 - The plugins
     - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
     - [zsh-bat](https://github.com/fdellwing/zsh-bat)
