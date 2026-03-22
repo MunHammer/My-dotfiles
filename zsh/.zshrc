@@ -90,8 +90,9 @@ fi
 
 . "$HOME/.cargo/env"
 
-# Adds ~/bin to my $PATH
+# Adds ~/bin & ~/.local/bin to my $PATH
 export PATH=$PATH:~/bin
+export PATH=$PATH:~/.local/bin
 # Set up zoxide
 eval "$(zoxide init zsh)"
 fastfetch
