@@ -11,6 +11,7 @@ The programs I use for these dotfiles:
 - [fzf](https://github.com/junegunn/fzf#installation)
 - [Taplo](https://rust-lang.org/)
 - [Rust](https://rust-lang.org/)
+- [Eza](https://github.com/eza-community/eza)
 - The plugins
     - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
     - [zsh-bat](https://github.com/fdellwing/zsh-bat)

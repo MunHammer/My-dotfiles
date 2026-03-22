@@ -93,6 +93,8 @@ fi
 # Adds ~/bin & ~/.local/bin to my $PATH
 export PATH=$PATH:~/bin
 export PATH=$PATH:~/.local/bin
+# set up fzf
+source <(fzf --zsh)
 # Set up zoxide
 eval "$(zoxide init zsh)"
 fastfetch
