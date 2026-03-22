@@ -88,6 +88,9 @@ else
   export EDITOR='hx'
 fi
 
+# set up starship
+eval "$(starship init zsh)"
+
 . "$HOME/.cargo/env"
 
 # Adds ~/bin to my $PATH
