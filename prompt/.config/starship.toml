@@ -1,0 +1,33 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+format = """\
+$battery  \
+$directory  \
+[█████](fg:bold fg:bright-purple) """
+[battery]
+full_symbol = "󰁹 "
+charging_symbol = "󰢝 "
+discharging_symbol = "󰂍 "
+unknown_symbol = "󰂑 "
+empty_symbol = "󰂎 "
+format = '[$symbol$percentage]($style)'
+[[battery.display]]
+threshold = 20
+style = "fg:bold fg:red"
+[[battery.display]]
+threshold = 50
+style = "fg:bold fg:yellow"
+[[battery.display]]
+threshold = 100
+style = "fg:bold fg:green"
+[directory]
+truncation_length = 50
+style = 'cyan bold'
+read_only_style = "fg:bold fg:blink fg:bright-cyan"
+repo_root_style = "fg:underline fg:bold fg:bright-cyan"
+format = '[$path]($style)[$read_only]($read_only_style)'
+[directory.substitutions]
+".dotfiles" = " "
+".config" = " "
+"RustProjects" = " "
+"Programming" = " "
+"CProjects" = " "
