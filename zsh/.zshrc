@@ -88,9 +88,6 @@ else
   export EDITOR='hx'
 fi
 
-# set up starship
-eval "$(starship init zsh)"
-
 . "$HOME/.cargo/env"
 
 # Adds ~/bin to my $PATH
@@ -98,3 +95,5 @@ export PATH=$PATH:~/bin
 # Set up zoxide
 eval "$(zoxide init zsh)"
 fastfetch
+# set up starship
+eval "$(starship init zsh)"

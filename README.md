@@ -11,6 +11,7 @@ The programs I use for these dotfiles:
 - [fzf](https://github.com/junegunn/fzf#installation)
 - [Taplo](https://rust-lang.org/)
 - [Rust](https://rust-lang.org/)
+- [Starship]https://starship.rs/installing/()
 - The plugins
     - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
     - [zsh-bat](https://github.com/fdellwing/zsh-bat)
@@ -44,6 +45,8 @@ The programs I use for these dotfiles:
   # The site https://rust-lang.org/tools/install/
   # I used cargo to install zoxide
   cargo install zoxide
+  # starship, the prompt engine
+  cargo install starship --locked
   # follow the prompts, disregard the config
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   # install the plugins
