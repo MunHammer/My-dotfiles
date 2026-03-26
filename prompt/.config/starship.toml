@@ -1,10 +1,16 @@
 "$schema" = 'https://starship.rs/config-schema.json'
+continuation_prompt = '[⤷ ](bold 7)'
 format = """\
 $battery \
 $hostname\
 $directory\
 $memory_usage\
-$cmd_duration
+$cmd_duration\
+$fill\
+$git_branch\
+$git_status\
+$git_metrics\
+$git_state
 $character"""
 
 [battery]
@@ -37,6 +43,34 @@ format = '[$path]($style)[$read_only]($read_only_style) '
 "RustProjects" = " "
 "Programming" = " "
 "CProjects" = " "
+
+[fill]
+symbol = " "
+style = "dimmed"
+
+[git_branch]
+format = "[$symbol$branch(:$remote_branch)]($style) "
+style = "bold red"
+
+[git_status]
+style = "bold 7"
+format = '''([$all_status$ahead_behind]($style))'''
+conflicted = '[!= $count ](bold red)'
+ahead = '[⇡$count](bold green) '
+behind = '[⇣$count](bold red) '
+diverged = '[⇡$ahead_count](bold green) [⇣$behind_count](bold red) '
+untracked = '[?$count ](bold 3)'
+stashed = '[\$$count](7) '
+modified = '[!$count](7) '
+staged = '[+$count](bold green) '
+renamed = '[»$count](7) '
+deleted = '[✘$count](bold red) '
+
+[git_metrics]
+disabled = false
+
+[git_state]
+style = "bold purple"
 
 [memory_usage]
 threshold = 75
