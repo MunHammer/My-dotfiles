@@ -1,15 +1,19 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 format = """\
-$battery  \
-$directory  \
-[█████](fg:bold fg:bright-purple) """
+$battery \
+$hostname\
+$directory\
+$memory_usage\
+$cmd_duration
+$character"""
+
 [battery]
 full_symbol = "󰁹 "
 charging_symbol = "󰢝 "
 discharging_symbol = "󰂍 "
 unknown_symbol = "󰂑 "
 empty_symbol = "󰂎 "
-format = '[$symbol$percentage]($style)'
+format = '[$symbol$percentage]($style) '
 [[battery.display]]
 threshold = 20
 style = "fg:bold fg:red"
@@ -19,15 +23,34 @@ style = "fg:bold fg:yellow"
 [[battery.display]]
 threshold = 100
 style = "fg:bold fg:green"
+
 [directory]
 truncation_length = 50
 style = 'cyan bold'
 read_only_style = "fg:bold fg:blink fg:bright-cyan"
 repo_root_style = "fg:underline fg:bold fg:bright-cyan"
-format = '[$path]($style)[$read_only]($read_only_style)'
+format = '[$path]($style)[$read_only]($read_only_style) '
+
 [directory.substitutions]
 ".dotfiles" = " "
 ".config" = " "
 "RustProjects" = " "
 "Programming" = " "
 "CProjects" = " "
+
+[memory_usage]
+threshold = 75
+format = "[$ram( | $swap)]($style)"
+style = "bold red"
+disabled = false
+
+[cmd_duration]
+format = '[$duration]($style)'
+show_notifications = true
+min_time_to_notify = 50_000
+style = 'bold 3'
+
+[hostname]
+trim_at = ''
+format = '[$ssh_symbol$hostname]($style) '
+aliases = { "Kydenpi" = "rpi" }
