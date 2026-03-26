@@ -98,3 +98,5 @@ source <(fzf --zsh)
 # Set up zoxide
 eval "$(zoxide init zsh)"
 fastfetch
+# set up starship
+eval "$(starship init zsh)"
