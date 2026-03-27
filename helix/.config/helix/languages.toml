@@ -11,7 +11,7 @@ timeout = 10
 config.cargo.features = "all"
 
 [language-server.rust-analyzer.config.check]
-command = "check"
+command = "clippy"
 
 [[language]]
 name = "toml"
@@ -20,6 +20,7 @@ diagnostic-severity = "info"
 indent = { tab-width = 2, unit = " " }
 language-servers = ["taplo"]
 formatter = { command = "taplo", args = ["fmt", "-"] }
+roots = ["."]
 [language-server.taplo]
 command = "taplo"
 args = ["lsp", "stdio"]

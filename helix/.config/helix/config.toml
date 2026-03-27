@@ -10,9 +10,21 @@ trim-final-newlines = true
 trim-trailing-whitespace = true
 
 [editor.statusline]
-left = ["mode", "version-control", "separator",  "spinner", "read-only-indicator"]
+left = [
+  "mode",
+  "version-control",
+  "separator",
+  "spinner",
+  "read-only-indicator",
+]
 center = ["file-name", "spacer", "file-modification-indicator"]
-right = ["diagnostics", "workspace-diagnostics", "file-type", "file-encoding", "position"]
+right = [
+  "diagnostics",
+  "workspace-diagnostics",
+  "file-type",
+  "file-encoding",
+  "position",
+]
 separator = " LSP"
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
@@ -32,8 +44,8 @@ select = "underline"
 hidden = false
 
 [editor.auto-save]
-focus-lost = true
 after-delay.enable = true
+after-delay.timeout = 30000
 
 [editor.whitespace]
 render = "all"
