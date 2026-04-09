@@ -6,6 +6,7 @@ mouse = false
 shell = ["zsh", "-c"]
 gutters = ["diagnostics", "line-numbers", "spacer", "diff"]
 completion-replace = true
+bufferline = "multiple"
 trim-final-newlines = true
 trim-trailing-whitespace = true
 
@@ -43,14 +44,14 @@ select = "underline"
 [editor.file-picker]
 hidden = false
 
-[editor.auto-save]
-after-delay.enable = true
-after-delay.timeout = 30000
+[editor.auto-save.after-delay]
+enable = true
+timeout = 30000
 
 [editor.whitespace]
 render = "all"
 
-[editor.whitespace.character]
+[editor.whitespace.characters]
 space = "·"
 nbsp = "⍽"
 nnbsp = "␣"
@@ -60,12 +61,11 @@ tabpad = "O"
 
 [editor.indent-guides]
 render = true
-character = "┊"
+character = "▏"
 
 [editor.soft-wrap]
 enable = true
 wrap-indicator = "⤷ "
-wrap-at-text-width = true
 
 [editor.inline-diagnostics]
 cursor-line = "hint"
