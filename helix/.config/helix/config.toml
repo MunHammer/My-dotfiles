@@ -62,6 +62,7 @@ tabpad = "O"
 [editor.indent-guides]
 render = true
 character = "▏"
+skip-levels = 1
 
 [editor.soft-wrap]
 enable = true
