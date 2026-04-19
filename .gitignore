@@ -1,0 +1,2 @@
+# ignores the alias to ssh into my raspberry pi
+zsh/.oh-my-zsh/custom/rpi.zsh
