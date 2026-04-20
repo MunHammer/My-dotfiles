@@ -88,6 +88,7 @@ plugins=(
   command-not-found
   you-should-use
   zsh-autosuggestions
+  ohmyzsh-full-autoupdate
   zsh-syntax-highlighting
 )
 
