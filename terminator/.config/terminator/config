@@ -11,6 +11,7 @@
     cursor_bg_color = "#191834"
     font = Cousine Nerd Font Mono 10
     foreground_color = "#d6adff"
+    scrollbar_position = hidden
     scrollback_lines = 1000
     palette = "#3c4043:#700900:#33d17a:#e5a50a:#3584e4:#83008f:#008d94:#e9d6ff:#9aa0a6:#ff291a:#00ff40:#ffff00:#99c1f1:#e600ff:#00ffff:#ffffff"
     use_system_font = False
