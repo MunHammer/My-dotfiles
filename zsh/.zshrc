@@ -1,5 +1,10 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+# I set my path here because otherwise, the eza plugin doesn't see eza
+
+. "$HOME/.cargo/env"
+
+# Adds ~/bin & ~/.local/bin to my $PATH
+export PATH=$PATH:~/bin
+export PATH=$PATH:~/.local/bin
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -108,11 +113,6 @@ else
   export EDITOR='hx'
 fi
 
-. "$HOME/.cargo/env"
-
-# Adds ~/bin & ~/.local/bin to my $PATH
-export PATH=$PATH:~/bin
-export PATH=$PATH:~/.local/bin
 # Set up zoxide
 eval "$(zoxide init zsh)"
 fastfetch
