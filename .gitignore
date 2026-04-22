@@ -1,2 +1,6 @@
 # ignores the alias to ssh into my raspberry pi
 zsh/.oh-my-zsh/custom/rpi.zsh
+# ignore some universal variables that could dox me
+fish/.config/fish/fish_variables
+# ignore my fish plugin's functions because they are automatically add with the fish_plugins file
+fish/.config/fish/functions/
