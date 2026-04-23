@@ -11,6 +11,7 @@ if status is-interactive
     abbr -a -- cat bat
     abbr -a -- ls eza
     abbr -a -- tree eza -T
+    abbr -a -- trash gio trash
 
     # Helix key bindings
     fish_helix_key_bindings
@@ -25,6 +26,6 @@ if status is-interactive
     fastfetch
 
     # displays an intro message
-    set -g fish_greeting "Hello & thank you for believing that I have good enough dotfiels for you to use
+    set -g fish_greeting "Hello & thank you for believing that I have good enough dotfiles for you to use
 Also, open $XDG_CONFIG_HOME/fish/config.fish & edit the second to last line to change this greeting"
 end
