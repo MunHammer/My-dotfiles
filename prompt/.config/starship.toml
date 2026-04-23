@@ -30,6 +30,11 @@ style = "fg:bold fg:yellow"
 threshold = 100
 style = "fg:bold fg:green"
 
+[character]
+success_symbol = "[I](bold green)"
+error_symbol = "[I](bold red)"
+vimcmd_symbol = "[❯](bold green)"
+
 [directory]
 truncation_length = 50
 style = 'cyan bold'
