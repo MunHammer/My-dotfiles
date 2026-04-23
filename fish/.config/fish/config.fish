@@ -5,9 +5,16 @@ set -xg VISUAL hx
 
 if status is-interactive
     # aliases
-    alias bat="batcat"
+    alias bat="batcat -p"
     alias eza="eza --icons --git --icons=auto --group-directories-first -gh"
+    alias clang="clang -Wall -Wextra -Wpedantic -Wconversion -Wshadow"
     # abbreviations
+    # Programming languages
+    abbr -a -- rust cargo run
+    abbr -a -- release cargo run --release
+    abbr -a -- release-c clang -O3
+
+    # Quality of life
     abbr -a -- cat bat
     abbr -a -- ls eza
     abbr -a -- tree eza -T
