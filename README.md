@@ -14,7 +14,7 @@ The programs I use for these dotfiles:
 - [Eza](https://github.com/eza-community/eza)
 - [Starship](https://starship.rs/installing/)
 - The plugins
-    - [fisehr](https://github.com/jorgebucaran/fisher)
+    - [fisher](https://github.com/jorgebucaran/fisher)
     - [plugin-git](https://github.com/jhillyerd/plugin-git)
     - [last-working-dir-fish-pkg](https://github.com/kfkonrad/last-working-dir-fish-pkg)
     - [fish-helix](https://github.com/munhammer/fish-helix)[^1]
