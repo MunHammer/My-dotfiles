@@ -1,8 +1,8 @@
 # My dotfiles
 The programs I use for these dotfiles:
 - [Terminator](https://gnome-terminator.org/)
-- [Zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
-- [Oh-My-Zsh](https://ohmyz.sh/)
+- [fish](https://github.com/fish-shell/fish-shell)
+- [fisher](https://github.com/jorgebucaran/fisher)
 - [Git](https://git-scm.com/) (obviously)
 - [Helix](https://helix-editor.com/)
 - [Fastfetch](https://github.com/fastfetch-cli/fastfetch)
@@ -14,10 +14,11 @@ The programs I use for these dotfiles:
 - [Eza](https://github.com/eza-community/eza)
 - [Starship](https://starship.rs/installing/)
 - The plugins
-    - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
-    - [zsh-bat](https://github.com/fdellwing/zsh-bat)
-    - [you-should-use](https://github.com/MichaelAquilina/zsh-you-should-use)
-    - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+    - [fisehr](https://github.com/jorgebucaran/fisher)
+    - [plugin-git](https://github.com/jhillyerd/plugin-git)
+    - [last-working-dir-fish-pkg](https://github.com/kfkonrad/last-working-dir-fish-pkg)
+    - [fish-helix](https://github.com/munhammer/fish-helix)[^1]
+[^1]: Using my fork because the other one isn't compatible with more modern fish versions
 
 
 ## How to set up the dotfiles
@@ -39,8 +40,10 @@ The programs I use for these dotfiles:
 ## Example installation
 ```bash
   sudo add-apt-repository ppa:maveonair/helix-editor
+  echo 'deb http://download.opensuse.org/repositories/shells:/fish/Debian_13/ /' | sudo tee /etc/apt/sources.list.d/shells:fish.list
+curl -fsSL https://download.opensuse.org/repositories/shells:fish/Debian_13/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/shells_fish.gpg > /dev/null
   sudo apt update
-  sudo apt install zsh git terminator fastfetch helix stow bat fzf
+  sudo apt install fish git terminator fastfetch helix stow bat fzf
   # This one is optional, but I recommend it, because I have aliases for rust
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
   # The site https://rust-lang.org/tools/install/
@@ -48,22 +51,19 @@ The programs I use for these dotfiles:
   cargo install zoxide
   # starship, the prompt engine
   cargo install starship --locked
-  # follow the prompts, disregard the config
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  # install the plugins
-  # syntax highlighting
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-  # you-should-use
-  git clone https://github.com/MichaelAquilina/zsh-you-should-use.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/you-should-use
-  # autosuggestions
-  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-  # bat
-  git clone https://github.com/fdellwing/zsh-bat.git $ZSH_CUSTOM/plugins/zsh-bat
+  exec fish
+```
+```fish
+  # install fisher
+  curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+  fisher update
   # clone this repo
   git clone https://github.com/MunHammer/My-dotfiles.git ~/.dotfiles
-  rm ~/.zshrc ~/.gitconfig ~/.config/terminator/config ~/.config/helix/config.toml ~/.config/helix/languages.toml
   cd ~/.dotfiles
-  stow zsh terminator helix git fastfetch
-  # Reload the terminal so everything activates
-  source ~/.zshrc
+  # a cheap, but easy way to override the pre-existing dotfiles
+  stow fish terminator helix git fastfetch --adopt *
+  git restore .
+  stow zsh terminator helix git fastfetch --adopt *
+  # reload & make sure everything works well
+  exec fish
 ```
