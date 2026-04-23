@@ -38,7 +38,12 @@ indent = { tab-width = 4, unit = " " }
 name = "python"
 indent = { tab-width = 4, unit = " " }
 language-servers = ["basedpyright", "ruff"]
-auto-format = true
+
+[[language]]
+name = "scheme"
+indent = { tab-width = 4, unit = " " }
+language-servers = ["steel-language-server"]
+formatter = { command = "schemat" }
 
 [language-server.basedpyright]
 command = "basedpyright-langserver"
@@ -50,3 +55,7 @@ autoSearchPaths = true
 [language-server.ruff]
 commmand = "ruff"
 args = ["server"]
+
+[language-server.steel-language-server]
+command = "steel-language-server"
+args = []
