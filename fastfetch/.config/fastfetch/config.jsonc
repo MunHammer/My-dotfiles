@@ -12,10 +12,6 @@
     "preserveAspectRatio": false,
     "recache": false,
     "position": "left",
-    "chafa": {
-      "fgOnly": false,
-      "symbols": "block+border+space-wide-inverted"
-    }
   },
   "display": {
     "stat": false,
@@ -118,12 +114,15 @@
       "keyIcon": ""
     },
     {
-      "type": "datetime",
-      "key": "Time"
+      "type": "cpu",
+      "temp": true
     },
     {
       "type": "cpuusage",
       "key": "CPU"
+    },
+    {
+      "type": "gpu"
     },
     {
       "type": "memory",

@@ -4,11 +4,13 @@ theme = "base16_transparent"
 scrolloff = 10
 mouse = false
 shell = ["zsh", "-c"]
+continue-comments = false
 gutters = ["diagnostics", "line-numbers", "spacer", "diff"]
 completion-replace = true
 bufferline = "multiple"
 trim-final-newlines = true
 trim-trailing-whitespace = true
+popup-border = "popup"
 
 [editor.statusline]
 left = [
@@ -71,3 +73,14 @@ wrap-indicator = "⤷ "
 [editor.inline-diagnostics]
 cursor-line = "hint"
 other-lines = "warning"
+
+[keys.insert]
+C-backspace = "delete_word_backward"
+A-q = "normal_mode"
+
+[keys.normal]
+A-q = ":q"
+A-w = ":w"
+C-r = ":config-reload"
+tab = ":bn"
+S-tab = ":bp"
