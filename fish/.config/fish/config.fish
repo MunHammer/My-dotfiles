@@ -5,7 +5,7 @@ set -xg VISUAL hx
 
 if status is-interactive
     # aliases
-    alias bat="batcat -p"
+    alias bat="bat -p"
     alias eza="eza --icons --git --icons=auto --group-directories-first -gh"
     alias clang="clang -Wall -Wextra -Wpedantic -Wconversion -Wshadow"
     # abbreviations
