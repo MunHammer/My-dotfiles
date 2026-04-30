@@ -1,0 +1,86 @@
+theme = "base16_transparent"
+
+[editor]
+scrolloff = 10
+mouse = false
+shell = ["fish", "-c"]
+continue-comments = false
+gutters = ["diagnostics", "line-numbers", "spacer", "diff"]
+completion-replace = true
+bufferline = "multiple"
+trim-final-newlines = true
+trim-trailing-whitespace = true
+popup-border = "popup"
+
+[editor.statusline]
+left = [
+  "mode",
+  "version-control",
+  "separator",
+  "spinner",
+  "read-only-indicator",
+]
+center = ["file-name", "spacer", "file-modification-indicator"]
+right = [
+  "diagnostics",
+  "workspace-diagnostics",
+  "file-type",
+  "file-encoding",
+  "position",
+]
+separator = " LSP"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+diagnostics = ["warning", "error", "info", "hint"]
+workspace-diagnostics = ["warning", "error"]
+
+[editor.lsp]
+display-progress-messages = true
+display-inlay-hints = true
+
+[editor.cursor-shape]
+insert = "bar"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.auto-save.after-delay]
+enable = true
+timeout = 30000
+
+[editor.whitespace]
+render = "all"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+nnbsp = "␣"
+tab = "N"
+newline = "⏎"
+tabpad = "O"
+
+[editor.indent-guides]
+render = true
+character = "▏"
+skip-levels = 1
+
+[editor.soft-wrap]
+enable = true
+wrap-indicator = "⤷ "
+
+[editor.inline-diagnostics]
+cursor-line = "hint"
+other-lines = "warning"
+
+[keys.insert]
+C-backspace = "delete_word_backward"
+A-q = "normal_mode"
+
+[keys.normal]
+A-q = ":q"
+A-w = ":w"
+C-r = ":config-reload"
+tab = ":bn"
+S-tab = ":bp"
