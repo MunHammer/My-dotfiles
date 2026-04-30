@@ -1,0 +1,61 @@
+[[language]]
+name = "rust"
+auto-format = true
+text-width = 75
+diagnostic-severity = "info"
+indent = { tab-width = 4, unit = " " }
+
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+timeout = 10
+config.cargo.features = "all"
+
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+
+[[language]]
+name = "toml"
+auto-format = true
+diagnostic-severity = "info"
+indent = { tab-width = 4, unit = " " }
+language-servers = ["taplo"]
+formatter = { command = "taplo", args = ["fmt", "-"] }
+roots = ["."]
+[language-server.taplo]
+command = "taplo"
+args = ["lsp", "stdio"]
+[[language]]
+name = "json"
+indent = { tab-width = 4, unit = " " }
+[[language]]
+name = "html"
+indent = { tab-width = 4, unit = " " }
+[[language]]
+name = "css"
+indent = { tab-width = 4, unit = " " }
+
+[[language]]
+name = "python"
+indent = { tab-width = 4, unit = " " }
+language-servers = ["basedpyright", "ruff"]
+
+[[language]]
+name = "scheme"
+indent = { tab-width = 4, unit = " " }
+language-servers = ["steel-language-server"]
+formatter = { command = "schemat" }
+
+[language-server.basedpyright]
+command = "basedpyright-langserver"
+args = ["--stdio"]
+[language-server.basedpyright.config.basedpyright.analysis]
+typeCheckingMode = "strict"
+autoSearchPaths = true
+
+[language-server.ruff]
+commmand = "ruff"
+args = ["server"]
+
+[language-server.steel-language-server]
+command = "steel-language-server"
+args = []
