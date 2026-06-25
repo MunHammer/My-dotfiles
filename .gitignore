@@ -1,0 +1,3 @@
+fish/.config/fish/fish_variables
+# ignore my fish plugin's functions because they are automatically add with the fish_plugins file
+fish/.config/fish/functions/

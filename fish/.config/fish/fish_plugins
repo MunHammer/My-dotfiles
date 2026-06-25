@@ -1,4 +1,5 @@
 jorgebucaran/fisher
 jhillyerd/plugin-git
 kfkonrad/last-working-dir-fish-pkg
-munhammer/fish-helix
+sshilovsky/fish-helix
+jorgebucaran/nvm.fish
