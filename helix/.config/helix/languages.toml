@@ -4,6 +4,46 @@ auto-format = true
 text-width = 75
 diagnostic-severity = "info"
 indent = { tab-width = 4, unit = " " }
+language-servers = ["rust-analyzer", "harper-ls"]
+
+[[language]]
+name = "toml"
+auto-format = true
+diagnostic-severity = "info"
+indent = { tab-width = 4, unit = " " }
+language-servers = ["taplo", "harper-ls"]
+formatter = { command = "taplo", args = ["fmt", "-"] }
+roots = ["."]
+
+[[language]]
+name = "json"
+indent = { tab-width = 4, unit = " " }
+
+[[language]]
+name = "html"
+indent = { tab-width = 4, unit = " " }
+
+[[language]]
+name = "css"
+indent = { tab-width = 2, unit = " " }
+
+[[language]]
+name = "python"
+indent = { tab-width = 4, unit = " " }
+language-servers = ["basedpyright", "ruff", "harper-ls"]
+
+[[language]]
+name = "markdown"
+indent = { tab-width = 4, unit = " " }
+language-servers = ["marksman", "harper-ls"]
+
+[[language]]
+name = "scheme"
+indent = { tab-width = 4, unit = " " }
+language-servers = ["steel-language-server"]
+formatter = { command = "schemat" }
+
+# ====== Language servers ======
 
 [language-server.rust-analyzer]
 command = "rust-analyzer"
@@ -13,37 +53,9 @@ config.cargo.features = "all"
 [language-server.rust-analyzer.config.check]
 command = "clippy"
 
-[[language]]
-name = "toml"
-auto-format = true
-diagnostic-severity = "info"
-indent = { tab-width = 4, unit = " " }
-language-servers = ["taplo"]
-formatter = { command = "taplo", args = ["fmt", "-"] }
-roots = ["."]
 [language-server.taplo]
 command = "taplo"
 args = ["lsp", "stdio"]
-[[language]]
-name = "json"
-indent = { tab-width = 4, unit = " " }
-[[language]]
-name = "html"
-indent = { tab-width = 4, unit = " " }
-[[language]]
-name = "css"
-indent = { tab-width = 4, unit = " " }
-
-[[language]]
-name = "python"
-indent = { tab-width = 4, unit = " " }
-language-servers = ["basedpyright", "ruff"]
-
-[[language]]
-name = "scheme"
-indent = { tab-width = 4, unit = " " }
-language-servers = ["steel-language-server"]
-formatter = { command = "schemat" }
 
 [language-server.basedpyright]
 command = "basedpyright-langserver"
@@ -59,3 +71,10 @@ args = ["server"]
 [language-server.steel-language-server]
 command = "steel-language-server"
 args = []
+
+[language-server.harper-ls]
+command = "harper-ls"
+args = ["--stdio"]
+[language-server.harper-ls.config.harper-ls.linters]
+SpelledNumbers = true
+BoringWords = true

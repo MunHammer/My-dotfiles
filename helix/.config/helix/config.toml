@@ -22,6 +22,7 @@ left = [
 ]
 center = ["file-name", "spacer", "file-modification-indicator"]
 right = [
+  "primary-selection-length",
   "diagnostics",
   "workspace-diagnostics",
   "file-type",
