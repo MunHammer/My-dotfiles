@@ -1,4 +1,8 @@
 if status is-interactive
+    if set -q ZELLIJ
+    else
+        exec zellij
+    end
     # aliases
     alias bat="bat -p"
     alias eza="eza --icons --git --icons=auto --group-directories-first -gh"
@@ -14,6 +18,8 @@ if status is-interactive
     abbr -a -- ls eza
     abbr -a -- tree eza -T
     abbr -a -- trash gio trash
+    abbr -a -- cd z
+    abbr -a -- grep rg
 
     # Helix key bindings
     fish_helix_key_bindings
