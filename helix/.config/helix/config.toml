@@ -7,14 +7,3 @@ trim-trailing-whitespace = true
 [editor.auto-save.after-delay]
 enable = true
 timeout = 30000
-
-[keys.insert]
-C-backspace = "delete_word_backward"
-A-q = "normal_mode"
-
-[keys.normal]
-A-q = ":q"
-A-w = ":w"
-C-r = ":config-reload"
-tab = ":bn"
-S-tab = ":bp"
