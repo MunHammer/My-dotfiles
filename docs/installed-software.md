@@ -6,7 +6,7 @@
 - vencord
 - Kitty
 - Starship
-- Helix
+- Helix - I installed mattwparas' plugin branch
 - Fastfetch
 - Ironbar
 - Niri
@@ -16,6 +16,7 @@
 - Rust
 - Fish
 - C/C++
+- Steel
 ## Used, but Unconfigured (at Least Here)
 - Steam
 - Firefox
