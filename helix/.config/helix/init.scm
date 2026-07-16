@@ -1,6 +1,7 @@
 ;;; Config files
 (require "config.scm")
 (require "keymaps.scm")
+(require "languages.scm")
 
 ;;; plugins
 (require "forest/forest.scm")
