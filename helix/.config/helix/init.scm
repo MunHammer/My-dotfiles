@@ -10,4 +10,3 @@
 ; forest
 (forest-configure! 'left #:ignore (list ".git" "target"))
 (forest-set-style! 'snacks)
-(forest-open)
