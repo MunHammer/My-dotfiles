@@ -7,6 +7,7 @@
 | fish | [fish-lsp](https://fish-lsp.dev/) |
 | HTML | [SuperHTML](https://github.com/kristoff-it/superhtml) |
 | Markdown | [Marksman](https://github.com/artempyanykh/marksman/) |
+| Git commits | [commit-lsp](https://github.com/texel-sensei/commit-lsp) |
 | Python | [basedpyright](https://docs.basedpyright.com/latest/), [ruff](https://docs.astral.sh/ruff/) |
 | QML | [qmlls](https://doc.qt.io/qt-6/qtqml-tooling-qmlls.html) |
 | Rust | [rust-analyzer](https://rust-analyzer.github.io/) |

@@ -76,4 +76,4 @@
 ; Markdown
 (define-simple-language "markdown" '("marksman" "harper-ls"))
 ; Git commit
-(define-simple-language "git-commit" '("harper-ls"))
+(define-simple-language "git-commit" '("commit-lsp" "harper-ls"))
