@@ -7,7 +7,11 @@
       ; forest
       (e ":forest-open")
       ; streal
-      (o ":streal-open"))
+      (o ":streal-open")
+      ; moka
+      (b
+        (h ":moka-bufferline-move-left!")
+        (l ":moka-bufferline-move-right!")))
     ; smooth scroll
     (pageup ":page-up-smooth")
     (C-u ":half-page-up-smooth")
