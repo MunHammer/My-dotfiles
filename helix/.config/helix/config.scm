@@ -10,7 +10,6 @@
 ; (gutters (list "diagnostics" "line-numbers" "spacer" "diff"))
 (line-number "relative")
 (completion-replace #t)
-(bufferline "multiple")
 (popup-border "popup")
 (rainbow-brackets #t)
 ; trim-final-newlines = true

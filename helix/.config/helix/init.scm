@@ -50,4 +50,20 @@
                    (moka-segment 'position))
       #:align
       'right)))
+(moka-bufferline-configure!
+  #:mode
+  'multiple
+  #:active
+  (moka-buffer-style #:bg "#e9d6ff" #:fg "#0f0f0f")
+  #:inactive
+  (moka-buffer-style #:bg "#9986cf" #:fg "#3c4043")
+  #:gap
+  0
+  #:icons?
+  #t
+  #:colored-icons?
+  #t
+  #:dirty?
+  #t)
+(moka-bufferline-enable!)
 (moka-enable!)
