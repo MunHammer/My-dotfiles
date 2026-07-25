@@ -14,7 +14,7 @@
     (pagedown ":page-down-smooth")
     (C-d ":half-page-down-smooth")
     ;; builtins
-    (A-q ":q")
+    (A-q ":bc")
     (A-w ":w")
     (C-r ":config-reload")
     (tab ":bn")
