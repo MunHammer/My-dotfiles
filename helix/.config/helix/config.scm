@@ -16,32 +16,6 @@
 ; trim-final-newlines = true
 ; trim-trailing-whitespace = true
 
-(statusline
-  #:left
-  (list "mode" "version-control" "separator" "spinner" "read-only-indicator")
-
-  #:center
-  (list "file-name" "spacer" "file-modification-indicator")
-
-  #:right
-  (list "primary-selection-length" "diagnostics" "file-type" "file-encoding" "position")
-
-  #:separator
-  " LSP"
-
-  ; These ones don't work for some reason
-  #:mode.normal
-  "NORMAL"
-  #:mode.insert
-  "INSERT"
-  #:mode.select
-  "SELECT"
-
-  #:diagnostics
-  (list "warning" "error" "info" "hint")
-  #:workspace-diagnostics
-  (list "warning" "error"))
-
 (lsp (hash 'enable #t 'display-progress-messages #t 'display-inlay-hints #t))
 
 (cursor-shape #:insert 'bar #:select 'underline)
