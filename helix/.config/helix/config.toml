@@ -4,6 +4,8 @@ gutters = ["diagnostics", "line-numbers", "spacer", "diff"]
 trim-final-newlines = true
 trim-trailing-whitespace = true
 rounded-corners = true
+[editor.breadcrumb]
+enable = true
 
 [editor.auto-save.after-delay]
 enable = true
