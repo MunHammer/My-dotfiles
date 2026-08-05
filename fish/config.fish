@@ -35,5 +35,5 @@ if status is-interactive
 
     # displays an intro message
     set -g fish_greeting "Hello & thank you for believing that I have good enough dotfiles for you to use
-Also, open $XDG_CONFIG_HOME/fish/config.fish & edit the second to last line to change this greeting"
+    Also, open $XDG_CONFIG_HOME/fish/config.fish & edit the second to last line to change this greeting"
 end
