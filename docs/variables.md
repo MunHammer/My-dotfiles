@@ -3,5 +3,5 @@
 I have added
 - ~/.cargo/bin
 - ~/.local/bin
-- ~/.cargo/env
 - ~/.steel/bin
+- ~/.nix-profile/bin
