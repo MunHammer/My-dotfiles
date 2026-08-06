@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -28,35 +28,35 @@
   # plain files is through 'home.file'.
   xdg.configFile = {
     # misc
-    "fastfetch/config.jsonc".source = ~/.dotfiles/fastfetch.jsonc;
-    "btop/btop.conf".source = ~/.dotfiles/btop.conf;
-    "starship.toml".source = ~/.dotfiles/starship.toml;
-    "zellij/config.kdl".source = ~/.dotfiles/zellij.kdl;
+    "fastfetch/config.jsonc".source = config.lib.file.mkOutOfStoreSymlink ~/.dotfiles/fastfetch.jsonc;
+    "btop/btop.conf".source = config.lib.file.mkOutOfStoreSymlink ~/.dotfiles/btop.conf;
+    "starship.toml".source = config.lib.file.mkOutOfStoreSymlink ~/.dotfiles/starship.toml;
+    "zellij/config.kdl".source = config.lib.file.mkOutOfStoreSymlink ~/.dotfiles/zellij.kdl;
     # fish
-    "fish/config.fish".source = ~/.dotfiles/fish/config.fish;
-    "fish/fish_plugins".source = ~/.dotfiles/fish/fish_plugins;
+    "fish/config.fish".source = config.lib.file.mkOutOfStoreSymlink ~/.dotfiles/fish/config.fish;
+    "fish/fish_plugins".source = config.lib.file.mkOutOfStoreSymlink ~/.dotfiles/fish/fish_plugins;
     # niri
-    "niri/binds.kdl".source = ~/.dotfiles/niri/binds.kdl;
-    "niri/config.kdl".source = ~/.dotfiles/niri/config.kdl;
-    "niri/fancy.kdl".source = ~/.dotfiles/niri/fancy.kdl;
+    "niri/binds.kdl".source = config.lib.file.mkOutOfStoreSymlink ~/.dotfiles/niri/binds.kdl;
+    "niri/config.kdl".source = config.lib.file.mkOutOfStoreSymlink ~/.dotfiles/niri/config.kdl;
+    "niri/fancy.kdl".source = config.lib.file.mkOutOfStoreSymlink ~/.dotfiles/niri/fancy.kdl;
     # kitty
-    "kitty/kitty.conf".source = ~/.dotfiles/kitty/kitty.conf;
-    "kitty/specifics/bell.conf".source = ~/.dotfiles/kitty/specifics/bell.conf;
-    "kitty/specifics/cursor.conf".source = ~/.dotfiles/kitty/specifics/cursor.conf;
-    "kitty/specifics/fonts.conf".source = ~/.dotfiles/kitty/specifics/fonts.conf;
-    "kitty/specifics/mouse.conf".source = ~/.dotfiles/kitty/specifics/mouse.conf;
-    "kitty/specifics/performance.conf".source = ~/.dotfiles/kitty/specifics/performance.conf;
-    "kitty/specifics/scrollback.conf".source = ~/.dotfiles/kitty/specifics/scrollback.conf;
-    "kitty/specifics/style.conf".source = ~/.dotfiles/kitty/specifics/style.conf;
-    "kitty/specifics/tab_bar.conf".source = ~/.dotfiles/kitty/specifics/tab_bar.conf;
-    "kitty/specifics/windows.conf".source = ~/.dotfiles/kitty/specifics/windows.conf;
+    "kitty/kitty.conf".source = config.lib.file.mkOutOfStoreSymlink ~/.dotfiles/kitty/kitty.conf;
+    "kitty/specifics/bell.conf".source = config.lib.file.mkOutOfStoreSymlink ~/.dotfiles/kitty/specifics/bell.conf;
+    "kitty/specifics/cursor.conf".source = config.lib.file.mkOutOfStoreSymlink ~/.dotfiles/kitty/specifics/cursor.conf;
+    "kitty/specifics/fonts.conf".source = config.lib.file.mkOutOfStoreSymlink ~/.dotfiles/kitty/specifics/fonts.conf;
+    "kitty/specifics/mouse.conf".source = config.lib.file.mkOutOfStoreSymlink ~/.dotfiles/kitty/specifics/mouse.conf;
+    "kitty/specifics/performance.conf".source = config.lib.file.mkOutOfStoreSymlink ~/.dotfiles/kitty/specifics/performance.conf;
+    "kitty/specifics/scrollback.conf".source = config.lib.file.mkOutOfStoreSymlink ~/.dotfiles/kitty/specifics/scrollback.conf;
+    "kitty/specifics/style.conf".source = config.lib.file.mkOutOfStoreSymlink ~/.dotfiles/kitty/specifics/style.conf;
+    "kitty/specifics/tab_bar.conf".source = config.lib.file.mkOutOfStoreSymlink ~/.dotfiles/kitty/specifics/tab_bar.conf;
+    "kitty/specifics/windows.conf".source = config.lib.file.mkOutOfStoreSymlink ~/.dotfiles/kitty/specifics/windows.conf;
     # helix
-    "helix/helix.scm".source = ~/.dotfiles/helix/helix.scm;
-    "helix/init.scm".source = ~/.dotfiles/helix/init.scm;
-    "helix/config.scm".source = ~/.dotfiles/helix/config.scm;
-    "helix/config.toml".source = ~/.dotfiles/helix/config.toml;
-    "helix/keymaps.scm".source = ~/.dotfiles/helix/keymaps.scm;
-    "helix/languages.scm".source = ~/.dotfiles/helix/languages.scm;
+    "helix/helix.scm".source = config.lib.file.mkOutOfStoreSymlink ~/.dotfiles/helix/helix.scm;
+    "helix/init.scm".source = config.lib.file.mkOutOfStoreSymlink ~/.dotfiles/helix/init.scm;
+    "helix/config.scm".source = config.lib.file.mkOutOfStoreSymlink ~/.dotfiles/helix/config.scm;
+    "helix/config.toml".source = config.lib.file.mkOutOfStoreSymlink ~/.dotfiles/helix/config.toml;
+    "helix/keymaps.scm".source = config.lib.file.mkOutOfStoreSymlink ~/.dotfiles/helix/keymaps.scm;
+    "helix/languages.scm".source = config.lib.file.mkOutOfStoreSymlink ~/.dotfiles/helix/languages.scm;
   };
   home.file = {
     ".bashrc".source = ~/.dotfiles/bashrc;
