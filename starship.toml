@@ -86,7 +86,7 @@ disabled = false
 [cmd_duration]
 format = '[$duration]($style)'
 show_notifications = true
-min_time_to_notify = 50_000
+min_time_to_notify = 600_000
 style = 'bold 3'
 
 [hostname]
