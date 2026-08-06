@@ -30,6 +30,9 @@ if status is-interactive
     # setting up starship
     starship init fish | source
 
+    # sets up home manager
+    fenv ". $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
+
     # running fastfetch
     fastfetch
 
